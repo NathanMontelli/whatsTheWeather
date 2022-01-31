@@ -16,7 +16,7 @@ form.addEventListener('submit', event => {
   city = document.getElementById('submit').value
   console.log(city)
 
-  axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
+  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
     .then(res => {
       let cityWeather = res.data
       console.log(cityWeather)
@@ -73,7 +73,7 @@ form.addEventListener('submit', event => {
   event.preventDefault()
   city = document.getElementById('submit').value
   console.log(city)
-  axios.get((`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`))
+  axios.get((`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`))
     .then(res => {
       let forecast = res.data
       console.log(forecast)
